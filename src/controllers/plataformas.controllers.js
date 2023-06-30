@@ -82,7 +82,7 @@ const obtenerPlataforma = async (req, res) => {
             }
         );
     } catch (error) {
-        return httpError(res, "ERROR_GET_UN_SOLO_DATO-Plataforma")
+        return httpError(res, "ERROR_GET_UN_SOLO_DATO-PLATAFORMA")
     }
 }
 //  METODO PARA OBTENER UNA PLATAFORMA POR NOMBRE
@@ -126,7 +126,7 @@ const editarPlataforma = async (req, res) => {
         //EJECUTAMOS LA CONSULTA
         const [resultado] = await db.query(sql);
         if (!resultado.affectedRows) {
-            return httpError(res, "Error al Editar Plataforma");
+            return httpError(res, "Error al Editar la Plataforma");
         }
         //RETORNAMOS LA RESPUESTA
         return res.json({
@@ -134,7 +134,7 @@ const editarPlataforma = async (req, res) => {
             "msj": "Se editó correctamente la Plataforma"
         });
     } catch (error) {
-        return httpError(res, "Ocurrio algo en PUT Plataforma");
+        return httpError(res, "Ocurrio algo en el PUT Plataforma");
     }
 }
 // Metodos para eliminar
@@ -158,7 +158,7 @@ const eliminarPlataforma = async (req, res) => {
         )
 
     } catch (error) {
-        return httpError(res, "ERROR EN DELETE Plataforma");
+        return httpError(res, "ERROR EN DELETE PLATAFORMA");
     }
 }
 //EXPORTA NUESTRA RUTA PARA NUESTRO INDEX.JS

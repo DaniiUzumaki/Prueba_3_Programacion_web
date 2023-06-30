@@ -18,7 +18,7 @@ const login = async (req, res) => {
                     FROM usuario 
                     WHERE user = '${user}'`;
         /**
-         * DECONTRUIMOS NUESTRO ARREGLO DE RESULTADO DE LA QUERY
+         * DECONSTRUIMOS NUESTRO ARREGLO DE RESULTADO DE LA QUERY
          * DONDE EL NOMBRE QUE LE DEMOS A CADA UNO DE ELLOS ES A GUSTO
          * RESPETANDO EL ORDEN QUE TENGA ESTE ARREGLO
          */
@@ -58,7 +58,7 @@ const login = async (req, res) => {
         });
     } catch (error) {
         //EN CASO DE HABER ERROR EN EL TRY, MANDAMOS QUE OCURRIO ALGO
-        return httpError(res, "Ocurrio un problema en el Login de usuario");
+        return httpError(res, "Ocurrió un problema en el Login de usuario");
     }
 }
 //  METODO PARA VERIFICAR SI EL TOKEN ES VALIDO
@@ -68,7 +68,7 @@ const verificar = async (req, res) => {
             ok: true
         });
     } catch (error) {
-        return httpError(res, "Ocurrió algo al verificar la identidad del token");
+        return httpError(res, "Ocurrió algo al momento de verificar la identidad del token");
     }
 
 }
