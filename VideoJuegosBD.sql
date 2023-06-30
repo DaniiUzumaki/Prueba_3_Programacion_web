@@ -52,3 +52,45 @@ INSERT INTO `videojuegos` (`id_game`, `titulo`, `descripcion`, `id_plat`, `id_us
 	(1, 'Final Fantasy XVI', ' Juegos de rol...', 1, 1),
 	(2, 'Super Mario Bros', ' Juegos estilo Libre...', 2, 1);
 
+-- APUNTES RELEVANTES---------
+
+--  agregar juego
+--        {
+--             "id_game": 4,
+--             "titulo": " Pokemon Moon",
+--             "descripcion": "Juego de aventuras y mundo abierto",
+--             "id_plat": 5
+--         }
+
+-- formato para agregar usuario:
+--    {
+--             "id_user": 4,
+--             "nombre": "Clive",
+--             "apellido": "Rosfield",
+--             "user": "crosfield",
+--             "password": "$2b$10$C8b6531hFsVcsFnbxYWkS.Ea0bIRMinJcdwWcggCJRl1Mb74Hpo/S", //poner 12345678
+--             "activo": 1
+--         }
+
+--  {
+--             "id_plat": 6,
+--             "nombre": "Atari"
+--         },
+--         {
+--             "id_plat": 5,
+--             "nombre": "Nintendo Switch"
+--         }
+
+-- ---- para eliminar user necesito poner la url de /usuario/aqui el numero de id_user
+
+-- --- para editar videojuego:
+
+-- {
+--     "titulo": "Pokemon Sol",
+--     "descripcion": "Juego de aventuras con pokemon de Alola",
+--     "id_plat": "5"
+-- }
+
+-- --- para eliminar plataforma
+
+-- http://localhost:4000/plataforma/9    - poner id_plat

@@ -65,7 +65,7 @@ const agregarUsuario = async (req, res) => {
             // "usuario": usuario
         });
     } catch (error) {
-        return httpError(res, "Ocurrio algo en POST Usuario");
+        return httpError(res, "Ocurrió algo equivocado en POST Usuario");
     }
 }
 //  METODO PARA EDITAR UN USUARIO
@@ -81,10 +81,10 @@ const editarUsuario = async (req, res) => {
                 WHERE id_user = ${id}`;
         const [result] = await db.query(sql);
         res.json({
-            "msj": "usuario modificado",
+            "msj": "usuario modificado correctamente",
         });
     } catch (error) {
-        return httpError(res, "Ocurrio algo en PUT Usuario");
+        return httpError(res, "Ocurrio algo en PUT de Usuario");
     }
 }
 //  METODO PARA ELIMINAR UNA USUARIO
@@ -99,7 +99,7 @@ const eliminarUsuario = async (req, res) => {
 
         if (result.affectedRows) {
             return res.json({
-                "msj": "usuario eliminado"
+                "msj": "usuario eliminado correctamente"
             });
         }
 
@@ -107,7 +107,7 @@ const eliminarUsuario = async (req, res) => {
             "msj": "usuario no eliminado"
         });
     } catch (error) {
-        return httpError(res, "Ocurrio algo en DELETE Usuario");
+        return httpError(res, "Ocurrio algo en DELETE de Usuario");
     }
 
 }
